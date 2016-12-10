@@ -1,1 +1,46 @@
-SEARCH
+
+<h1>Need Music?</h1>
+<p class="lead">Use the SpotifySearch app to browse new releases and find your favorite songs<br> All you get is this text and a mostly barebones HTML document.</p>
+
+<form>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Search Artists..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
+  </div>
+</form>
+<div *ngIf="searchRes">
+  <div *ngFor="let artist of searchRes">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="search-res well">
+          <h4><a routerLink="/artist/{{artist.id}}">{{artist.name}}</a></h4>
+          <div>
+            <strong>Genres: </strong>
+            <span *ngFor="let genre of artist.genres">{{genre}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>
+  What’s on Spotify?
+  Music
+
+  There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.
+  Playlists
+
+  You’ll find readymade playlists to match your mood, put together by music fans and experts.
+  New Releases
+
+  Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.
+
+
+
+  Know what you want to listen to? Just search and hit play.
+  Browse
+
+  Check out the latest charts, brand new releases and great playlists for right now.
+  Discover
+
+  Enjoy new music every Monday with your own personal playlist. Or sit back and enjoy Radio.
+</p>
