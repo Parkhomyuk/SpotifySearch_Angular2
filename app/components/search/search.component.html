@@ -1,4 +1,4 @@
-
+<div class="container">
 <h1>Need Music?</h1>
 <p class="lead">Use the SpotifySearch app to browse new releases and find your favorite songs<br> All you get is this text and a mostly barebones HTML document.</p>
 
@@ -6,9 +6,10 @@
   <div class="form-group">
     <input class="form-control" type="text" placeholder="Search Artists..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
   </div>
-</form>
-<div *ngIf="searchRes">
-  <div *ngFor="let artist of searchRes">
+</form >
+<div class="list">
+<div *ngIf="searchRes" >
+  <div *ngFor="let artist of searchRes" >
     <div class="row">
       <div class="col-md-12">
         <div class="search-res well">
@@ -21,6 +22,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 <p>
   What’s on Spotify?
@@ -44,3 +46,4 @@
 
   Enjoy new music every Monday with your own personal playlist. Or sit back and enjoy Radio.
 </p>
+</div>
