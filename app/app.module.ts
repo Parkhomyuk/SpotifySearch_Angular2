@@ -10,6 +10,7 @@ import {AboutComponent} from './components/about/about.component';
 import {ArtistComponent} from './components/artist/artist.component';
 
 import {routing} from './app.routing';
+import {AlbumComponent} from "./components/album/album.component";
 
 @NgModule({
   imports: [ BrowserModule,
@@ -20,7 +21,9 @@ import {routing} from './app.routing';
     SearchComponent,
     NavbarComponent,
     AboutComponent,
-    ArtistComponent],
+    ArtistComponent,
+    AlbumComponent
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
